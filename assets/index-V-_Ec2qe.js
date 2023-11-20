@@ -3,12 +3,12 @@
     <h2 class="advice-title"></h2>
     <p class="advice-content"></p>
     <picture>
-      <source media="(min-width:377px)" srcset="./images/pattern-divider-desktop.svg">
-      <source media="(max-width:376px)" srcset="./images/pattern-divider-mobile.svg">
-      <img src="./images/pattern-divider-desktop.svg" alt="divider" class="advice-divider">
+      <source media="(min-width:377px)" srcset="./public/images/pattern-divider-desktop.svg">
+      <source media="(max-width:376px)" srcset="./public/images/pattern-divider-mobile.svg">
+      <img src="./public/images/pattern-divider-desktop.svg" alt="divider" class="advice-divider">
     </picture>
     <div class="advice-btn">
-      <img src="./images/icon-dice.svg" alt="dice button">
+      <img src="./public/images/icon-dice.svg" alt="dice button">
     </div>
   </div>
 `;async function s(){const i=await(await fetch("https://api.adviceslip.com/advice")).json();document.querySelector(".advice-title").innerText=`Advice # ${i.slip.id}`,document.querySelector(".advice-content").innerText=`"${i.slip.advice}"`}s();const d=document.querySelector(".advice-btn");d.addEventListener("click",()=>{s()});
