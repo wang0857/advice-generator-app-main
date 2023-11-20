@@ -1,0 +1,97 @@
+/* Overall Setting */
+@import './_variables.scss';
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    background-color: $dark-blue;
+
+    & > * {
+        font-family: 'Manrope', sans-serif;
+        color: $light-cyan;
+        box-sizing: border-box;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+}
+
+#app {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Advice */
+
+.advice {
+    &-container {
+        width: 540px;
+        min-height: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: $md;
+        background-color: $dark-grayish-blue;
+        padding: 50px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    &-title {
+        color: $neon-green;
+        text-transform: uppercase;
+        font-size: .75em;
+        letter-spacing: 3px;
+        margin-bottom: 38px;
+    }
+
+    &-content {
+        font-size: $quote-size;
+        font-weight: $extraBold;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &-divider {
+        width: 100%;
+    }
+
+    &-btn {
+        background-color: $neon-green;
+        border-radius: 50px;
+        padding: $lg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -32px;
+        transition: $transition;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 30px rgba($neon-green, 0.5);
+        }
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 376px) {
+    .advice {
+        &-container {
+            width: 342px;
+            min-height: 314px;
+            border-radius: $sm;
+        }
+    }
+}
