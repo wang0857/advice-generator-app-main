@@ -28,8 +28,16 @@ getAPI()
 
 // DOM elements
 const btn = document.querySelector('.advice-btn')
+const dice = document.querySelector('.advice-btn img')
 
 btn.addEventListener('click', () => {
+  dice.classList.add('throw')
   getAPI()
 })
+
+dice.addEventListener('animationend', () => {
+  dice.classList.remove('throw')
+})
+
+
 

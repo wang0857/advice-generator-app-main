@@ -84,6 +84,24 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+/* Throwing A Dice */
+.throw {
+    animation: throwing 1s ease-in-out;
+}
+
+@keyframes throwing {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+
 
 /* Mobile */
 @media screen and (max-width: 376px) {
