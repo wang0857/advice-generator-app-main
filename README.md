@@ -24,9 +24,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Advice-desktop](./screenshots/advice-desktop-1440x900.png)
-![Active advice-desktop](./screenshots/active-advice-desktop-1440x900.png)
-![Advice-Mobile](./screenshots/advice-mobile-375x704.png)
+![Advice-desktop](./src/screenshots/advice-desktop-1440x900.png)
+![Active advice-desktop](./src/screenshots/active-advice-desktop-1440x900.png)
+![Advice-Mobile](./src/screenshots/advice-mobile-375x704.png)
 
 
 ## My process

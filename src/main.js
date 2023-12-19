@@ -1,4 +1,5 @@
 import './style.css'
+import AdviceService from './services/advice.service'
 
 document.querySelector('#app').innerHTML = `
   <div class="advice-container">
@@ -16,12 +17,13 @@ document.querySelector('#app').innerHTML = `
 `
 
 // Fetch API
-async function getAPI() {
-  const response = await fetch('https://api.adviceslip.com/advice')
-  const data = await response.json()
-
-  document.querySelector('.advice-title').innerText = `Advice # ${data.slip.id}`
-  document.querySelector('.advice-content').innerText = `"${data.slip.advice}"`
+function getAPI() {
+  AdviceService.get().then(data => {
+    const adviceData = data.data
+    
+    document.querySelector('.advice-title').innerText = `Advice # ${adviceData.slip.id}`
+    document.querySelector('.advice-content').innerText = `"${adviceData.slip.advice}"`
+  })
 }
 
 getAPI()
